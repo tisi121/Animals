@@ -4,6 +4,9 @@
  */
 package animals;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author thejo
@@ -15,6 +18,7 @@ public class Animals {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        List<quatrePotes> llistaAnimals=new ArrayList<>();
     }
     
 }
