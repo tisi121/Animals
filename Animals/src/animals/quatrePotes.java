@@ -14,7 +14,7 @@ public class quatrePotes{
     private TIPUS tipus;
     private static int qt=0;
 
-    public quatrePotes(int idAnimal, TIPUS tipus) {
+    public quatrePotes(TIPUS tipus) {
         qt++;
         this.idAnimal = idAnimal*qt;
         this.tipus = tipus;

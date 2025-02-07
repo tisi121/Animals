@@ -5,7 +5,10 @@
 package animals;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Random;
 
 /**
  *
@@ -17,8 +20,40 @@ public class Animals {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //Constantes
+        final int MAX_ANIMALS=10000;
+        // Variables
         List<quatrePotes> llistaAnimals=new ArrayList<>();
+        
+        Random random= new Random();
+        
+        for(int i=0; i<MAX_ANIMALS;i++){
+        int numAleatori=random.nextInt(4)+1;
+        
+        switch(numAleatori){
+            case 1:
+                llistaAnimals.add(i, new quatrePotes(TIPUS.GOS));
+                break;
+            case 2:
+                llistaAnimals.add(i, new quatrePotes(TIPUS.ELEFANT));
+                break;
+            case 3:
+                llistaAnimals.add(i, new quatrePotes(TIPUS.GAT));
+                break;
+            case 4:
+                llistaAnimals.add(i, new quatrePotes(TIPUS.LLEO));
+                break;
+        }
+        }
+        for(quatrePotes animal:llistaAnimals){
+            System.out.println(animal);
+        }
+        
+        Map<TIPUS, Integer> qtAnimals=new HashMap<>();
+        
+        for(quatrePotes animal:llistaAnimals){
+            
+        }
     }
     
 }
